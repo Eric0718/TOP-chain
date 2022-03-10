@@ -60,8 +60,7 @@ if [ $? -eq 1 ]; then
         CPU_CORE=$( sysctl hw|grep ncpu|awk -F ':' '{print $2}' )
     fi
     
-    # # MEM_MEG=$( free -m | sed -n 2p | tr -s ' ' | cut -d\  -f2 )
-    
+    # # MEM_MEG=$( free -m | sed -n 2p | tr -s ' ' | cut -d\  -f2 ) 
     # # MEM_GIG=$(( ((MEM_MEG / 1000) / 2) ))
     # # JOBS=$(( MEM_GIG > CPU_CORE ? CPU_CORE : MEM_GIG ))
     # # make -j${JOBS}
